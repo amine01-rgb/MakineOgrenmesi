@@ -20,6 +20,7 @@ print(play)
 windy=veriler.iloc[:,4:5].values
 windy[:,0]=le.fit_transform(veriler.iloc[:,4:5])
 print(windy) 
+
 #verilerin birleştirilmesi
 sonuc = pd.DataFrame(data=outlook, index = range(14), columns = ['sunny','overcast','rainy'])
 print(sonuc)
@@ -69,6 +70,7 @@ X_train=x_train.sort_index()
 Y_train=y_train.sort_index()
 plt.plot(X_train,Y_train)
 plt.plot(X_test,lr.predict(X_test))
+
 # ---------------
 # çoklu doğrusal regresyon
 plays=s3.iloc[:,5:6].values
