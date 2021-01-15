@@ -8,7 +8,7 @@ y=veriler.iloc[:,2:3]
 X=x.values
 Y=y.values
 
-#linearRegression uyguladık  önce veride 
+#linearRegression 
 from sklearn.linear_model import LinearRegression
 lin_reg= LinearRegression()
 lin_reg.fit(X,Y)
@@ -25,6 +25,7 @@ x_poly=poly_reg.fit_transform(X)
 print(x_poly)
 lin_reg2= LinearRegression()
 lin_reg2.fit(x_poly,y)
+
 # Polinomal Regresyon görselleştirilmesi
 plt.scatter(X,Y)
 plt.plot(x,lin_reg2.predict(poly_reg.fit_transform(X)))
